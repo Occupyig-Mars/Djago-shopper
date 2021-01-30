@@ -1,0 +1,18 @@
+{%extends 'index.html'%}
+
+
+{%block content%}
+        <h1>Main</h1>
+        
+
+             
+        
+           {%csrf_token%} 
+           <form method="GET">
+            link
+           <input type="text" name="link" id="link">
+           size
+           <input type="Number" name="size" id="size">
+           <input type="submit" value="submit">
+            </form> 
+{%endblock%}

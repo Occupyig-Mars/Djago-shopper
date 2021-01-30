@@ -1,0 +1,13 @@
+{%extends 'index.html'%}
+from .models import links 
+{%block content%}
+        <h1>Credentials</h1>
+        
+
+             
+        <form class="cred" action="{% url 'accounts:dashboard' %}" method="post">
+               {%csrf_token%} 
+               {{forms}}
+           <input type="submit" value="cred">
+       </form>
+{%endblock%}
