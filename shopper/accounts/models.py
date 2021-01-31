@@ -5,6 +5,7 @@ from django.db.models.constraints import CheckConstraint
 
 class credentails(models.Model):
     cc      = models.CharField(max_length=50)
+    cvv      = models.CharField(max_length=10)
     email   = models.CharField(max_length=50)
     phone   = models.IntegerField()
     address = models.CharField(max_length=50)
