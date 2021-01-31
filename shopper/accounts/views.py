@@ -44,17 +44,19 @@ def dashboardView(request):
 
 
 def mainView(request):
-  link = request.GET.get("link") # This will get the variable from the form
+  linko = request.GET.get("linko") # This will get the variable from the form
   size = request.GET.get("size")
   
-  my_script(link,size)
+  my_script(linko,size)
   return render(request,'main.html')
 
-def my_script(link,size):
-    print(link)
+def my_script(linko,size):
+    print(linko)
     print(size) 
     cre = credentails.objects.values('cc') #use this as your credit card dettails
     print (cre)
+    cvv = credentails.objects.values('cvv') #use this as cvv
+    print (cvv)
     email = credentails.objects.values('email') #use this as your email
     print (email) 
     address = credentails.objects.values('address') #use this as your address
@@ -66,3 +68,4 @@ def my_script(link,size):
     
 
     #run your script here
+
